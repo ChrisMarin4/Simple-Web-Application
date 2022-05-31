@@ -1,0 +1,185 @@
+@charset "ISO-8859-1";
+
+body
+{
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: black;
+background-color: white;
+}
+
+header {
+	background: #b1c5e6;
+	height: 80px;
+	font-size: 30px;
+	color: white;
+	padding: 0px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: black;
+}
+
+hr {
+	border: 1px solid black;
+}
+
+h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.table{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+p.error{
+	color: red;
+}
+
+table{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+	border-collapse:separate;
+	border-spacing:10px 15px;
+ 
+}
+table tr {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+  background-color: #e5e5e5;
+}
+
+span {
+	color:red;
+	margin-left: 10px;
+}
+
+.display-table {
+	display: table !important;
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 20px Arial, sans-serif;
+}
+.display-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.display-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.border {
+	border: 2px solid #fbf8f8;
+	width: 420px;
+	height: 540px;
+	border-radius: 20px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 20px;
+	padding: 20px 80px 180px 50px;
+}
+
+.ui-datepicker table {
+	display: inline-table !important;
+	width: 21,65%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.submit {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.submit:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+select {
+	margin: 5px 0 22px 0;
+}
