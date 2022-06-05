@@ -1,7 +1,6 @@
 package com.webapp.hibernate.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,8 +22,6 @@ public class User implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	private ArrayList<User> users;
-	
 	@Column(name="user_name")
 	private String name;
 	
@@ -35,7 +32,7 @@ public class User implements Serializable{
 	private String gender;
 	
 	@Column(name="user_birthdate")
-	private String brithdate;
+	private String birthdate;
 	
 	@Column(name="user_workAddress", table="addresses")
 	private String work_address;
@@ -75,12 +72,12 @@ public class User implements Serializable{
 		this.gender = gender;
 	}
 
-	public String getBrithdate() {
-		return brithdate;
+	public String getBirthdate() {
+		return birthdate;
 	}
 
-	public void setBrithdate(String brithdate) {
-		this.brithdate = brithdate;
+	public void setBirthdate(String birthdate) {
+		this.birthdate = birthdate;
 	}
 
 	public String getWork_address() {
@@ -97,10 +94,6 @@ public class User implements Serializable{
 
 	public void setHome_address(String home_address) {
 		this.home_address = home_address;
-	}
-	
-	public void addUsertoList (User user) {
-		users.add(user);
 	}
 	
 	

@@ -2,7 +2,6 @@ package com.webapp.hibernate.controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +13,7 @@ import com.webapp.hibernate.model.User;
 
 
 @WebServlet ("/register")
-public class UserController extends HttpServlet{
+public class UserRegistrationController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	private UserDao userDao;
@@ -78,16 +77,19 @@ public class UserController extends HttpServlet{
 	        user.setName(name);
 	        user.setSurname(surname);
 	        user.setGender(gender);
-	        user.setBrithdate(birthdate);
+	        user.setBirthdate(birthdate);
 	        user.setWork_address(work_address);
 	        user.setHome_address(home_address);
 	       
 	        userDao.saveUser(user);
-
-	        
-	        
-	        RequestDispatcher dispatcher = request.getRequestDispatcher("homepage.jsp");
-	        dispatcher.forward(request, response);
-	        
+	        response.sendRedirect("display");
+			/*
+			 * List<User> userlist = userDao.getList();
+			 * 
+			 * 
+			 * request.setAttribute("userlist", userlist); RequestDispatcher dispatcher =
+			 * request.getRequestDispatcher("display2.jsp"); dispatcher.forward(request,
+			 * response);
+			 */
 	 }
 }

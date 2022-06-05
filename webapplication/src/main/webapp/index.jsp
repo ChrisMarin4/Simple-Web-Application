@@ -43,7 +43,7 @@
 			<div class="menu">
 				<ul>
 				  <li><a href="/webapplication/homepage.jsp">Homepage</a></li>
-				  <li><a href="/webapplication/display.jsp">Display Users</a></li>
+				  <li><a href="/webapplication/display">Display Users</a></li>
 				</ul>
 			</div>
 		</header>

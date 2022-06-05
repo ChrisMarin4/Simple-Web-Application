@@ -12,7 +12,7 @@
 <div class="menu">
 <ul>
   <li><a href="/webapplication/index.jsp">Register new user</a></li>
-  <li><a href="/webapplication/display.jsp">Display users</a></li>
+  <li><a href="/webapplication/display">Display users</a></li>
 </ul>
 </div>
 </header>

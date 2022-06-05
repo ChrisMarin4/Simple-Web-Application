@@ -19,22 +19,11 @@ System.out.println(user_id);
 				<ul>
 				  <li><a href="/webapplication/homepage.jsp">Homepage</a></li>
 				  <li><a href="/webapplication/index.jsp">Register Users</a></li>
-				  <li><a href="/webapplication/display.jsp">Display Users</a></li>
+				  <li><a href="/webapplication/display">Display Users</a></li>
 				</ul>
 			</div>
 	</header>
-	<sql:setDataSource
-        var="web_app"
-        driver="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/web_app"
-        user="root" password="Root1234"
-    />
-    
-	<sql:query var="listUsers"   dataSource="${web_app}">
-        SELECT users.*, addresses.* FROM users INNER JOIN addresses ON users.id = addresses.id WHERE users.id = ?
-        <sql:param value = '<%= request.getParameter("id") %>' />
-    </sql:query>
-    
+	
 <div align="center">
 	    <table class="display-table" border="1">
 	            <caption><h2>Details</h2></caption>
@@ -49,16 +38,14 @@ System.out.println(user_id);
 		            </tr>
 	            </thead>
 	            <tbody>
-	            <c:forEach var="user" items="${listUsers.rows}">
 	                <tr>
-	                    <td><c:out value="${user.user_name}" /></td>
-	                    <td><c:out value="${user.user_surname}" /></td>
-	                    <td><c:out value="${user.user_gender}" /></td>
-	                    <td><c:out value="${user.user_birthdate}" /></td>
-	                    <td><c:out value="${user.user_workAddress}" /></td>
-	                    <td><c:out value="${user.user_homeAddress}" /></td>
+	                    <td><c:out value="${user.name}" /></td>
+	                    <td><c:out value="${user.surname}" /></td>
+	                    <td><c:out value="${user.gender}" /></td>
+	                    <td><c:out value="${user.birthdate}" /></td>
+	                    <td><c:out value="${user.work_address}" /></td>
+	                    <td><c:out value="${user.home_address}" /></td>
 	                </tr>
-	            </c:forEach>
 	            </tbody>
 	        </table>
 </div>

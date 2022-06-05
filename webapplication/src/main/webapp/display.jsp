@@ -19,18 +19,7 @@
 			</ul>
 		</div>
 	</header>
-<sql:setDataSource
-        var="web_app"
-        driver="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/web_app"
-        user="root" password="Root1234"
-    />
-	
 
-
-<sql:query var="listUsers"   dataSource="${web_app}">
-        SELECT * FROM users;
-    </sql:query>
 <div align="center">
         <table class="display-table" border="1">
             <caption><h2>List of users</h2></caption>
@@ -41,10 +30,10 @@
 	            </tr>
             </thead>
             <tbody>
-            <c:forEach var="user" items="${listUsers.rows}">
-                <tr onclick="window.location='./details.jsp?id=${user.id}'">
-                    <td><c:out value="${user.user_name}" /></td>
-                    <td><c:out value="${user.user_surname}" /></td>
+            <c:forEach var="user" items="${userlist}">
+                <tr onclick="window.location='./details?id=${user.id}'">
+                    <td><c:out value="${user.name}" /></td>
+                    <td><c:out value="${user.surname}" /></td>
                 </tr>
             </c:forEach>
             </tbody>

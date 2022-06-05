@@ -2,6 +2,8 @@ package com.webapp.hibernate.dao;
 
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -30,6 +32,40 @@ public class UserDao {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public User getbyId(int id) {
+		
+
+		try(Session session = HIbernateUtil.getSessionFactory().openSession()) {
+			// load the object
+			return (User) session.get(User.class,id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public List<User> getList() {
+		
+		try(Session session = HIbernateUtil.getSessionFactory().openSession()) {
+			// save the object
+			List<User> userslist ;
+		    userslist = session.createQuery("select m from User m", User.class).list();
+		    /// για να δω τι αποθηκευει
+		    for (User user: userslist) {
+		    	System.out.println("User" + user.getName());
+		    }
+		    return userslist;
+		    
+		    
+		    
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
 	}
 	
 	
