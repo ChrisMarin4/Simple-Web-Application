@@ -50,13 +50,9 @@ public class UserDao {
 	public List<User> getList() {
 		
 		try(Session session = HIbernateUtil.getSessionFactory().openSession()) {
-			// save the object
+			// return the data to a list from database
 			List<User> userslist ;
 		    userslist = session.createQuery("select m from User m", User.class).list();
-		    /// για να δω τι αποθηκευει
-		    for (User user: userslist) {
-		    	System.out.println("User" + user.getName());
-		    }
 		    return userslist;
 		    
 		    

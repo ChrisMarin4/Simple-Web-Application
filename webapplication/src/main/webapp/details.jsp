@@ -4,9 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %> 
 
-<% String user_id = request.getParameter("id") ; 
-System.out.println(user_id);
-%>
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -30,7 +30,6 @@ public class UserDisplayController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("Display Done");
 		display(request, response);
 	}
 

@@ -30,7 +30,6 @@ public class UserDetailsController extends HttpServlet{
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		    throws ServletException, IOException {
-		        System.out.println("Details Done");
 		        details(request, response);
 		    }
 
@@ -38,7 +37,6 @@ public class UserDetailsController extends HttpServlet{
 		 	
 		    String id = request.getParameter("id");
 		    int idInt = Integer.parseInt(id);
-		    System.out.println(idInt);
 	        User user = userDao.getbyId(idInt);
 	        request.setAttribute("user", user);
         	request.getRequestDispatcher("/details.jsp").forward(request, response);

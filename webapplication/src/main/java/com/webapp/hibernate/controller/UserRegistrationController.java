@@ -83,13 +83,6 @@ public class UserRegistrationController extends HttpServlet{
 	       
 	        userDao.saveUser(user);
 	        response.sendRedirect("display");
-			/*
-			 * List<User> userlist = userDao.getList();
-			 * 
-			 * 
-			 * request.setAttribute("userlist", userlist); RequestDispatcher dispatcher =
-			 * request.getRequestDispatcher("display2.jsp"); dispatcher.forward(request,
-			 * response);
-			 */
+		
 	 }
 }
